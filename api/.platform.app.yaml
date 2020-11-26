@@ -16,7 +16,7 @@ hooks:
 
 
 relationships:
-  database: "db:mysql"
+  mongodb: "dbmongo:mongodb"
 
 web:
   commands:
