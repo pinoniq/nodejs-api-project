@@ -1,4 +1,4 @@
-name: app
+name: api
 
 type: nodejs:14
 
