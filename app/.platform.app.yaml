@@ -5,6 +5,7 @@ type: nodejs:14
 dependencies:
   nodejs:
     pm2: "^4.5.0"
+    yarn: "1.22.5"
 
 build:
   flavor: none
