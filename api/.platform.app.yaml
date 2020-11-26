@@ -1,0 +1,31 @@
+name: app
+
+type: nodejs:14
+
+dependencies:
+  nodejs:
+    pm2: "^4.5.0"
+
+build:
+  flavor: none
+
+hooks:
+  build: |
+    # Download dependencies and build Strapi.
+    yarn
+    yarn build
+
+
+relationships:
+  database: "db:mysql"
+
+web:
+  commands:
+    start: "PM2_HOME=/app/run pm2 start ecosystem.config.js --no-daemon"
+
+mounts:
+  run:
+    source: local
+    source_path: run
+
+disk: 512
