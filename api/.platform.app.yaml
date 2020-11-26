@@ -1,6 +1,7 @@
 name: api
 
 type: nodejs:14
+size: S
 
 dependencies:
   nodejs:

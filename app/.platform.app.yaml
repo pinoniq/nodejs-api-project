@@ -1,6 +1,7 @@
 name: app
 
 type: nodejs:14
+size: S
 
 dependencies:
   nodejs:
