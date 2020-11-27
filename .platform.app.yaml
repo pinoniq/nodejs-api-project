@@ -1,7 +1,6 @@
 name: api
 
 type: nodejs:14
-size: S
 
 dependencies:
   nodejs:
@@ -13,7 +12,11 @@ build:
 
 hooks:
   build: |
+    cd api
     yarn
+    cd ../app
+    yarn
+    yarn build
 
 
 relationships:
@@ -21,7 +24,7 @@ relationships:
 
 web:
   commands:
-    start: "PM2_HOME=/app/run pm2 start ecosystem.config.js --no-daemon"
+    start: "PM2_HOME=/app/run pm2 start api/ecosystem.config.js --no-daemon"
 
 mounts:
   run:
