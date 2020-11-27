@@ -1,7 +1,7 @@
 require('dotenv').config();
 const pshConfig = require('platformsh-config').config();
 
-let config = {};
+let config;
 
 if (!pshConfig.isValidPlatform()) {
   config = {
@@ -12,12 +12,12 @@ if (!pshConfig.isValidPlatform()) {
     },
   };
 } else {
-  const credentials = config.credentials('mongodb');
+  const credentials = pshConfig.credentials('mongodb');
 
   config = {
     port: pshConfig.port,
     mongo: {
-      connectionString: config.formattedCredentials('mongoDB', 'mongoDB'),
+      connectionString: pshConfig.formattedCredentials('mongoDB', 'mongoDB'),
       path: credentials.path,
     },
   };
