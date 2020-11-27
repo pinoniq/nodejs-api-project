@@ -17,7 +17,7 @@ if (!pshConfig.isValidPlatform()) {
   config = {
     port: pshConfig.port,
     mongo: {
-      connectionString: pshConfig.formattedCredentials('mongoDB', 'mongoDB'),
+      connectionString: pshConfig.formattedCredentials('mongodb', 'mongodb'),
       path: credentials.path,
     },
   };
