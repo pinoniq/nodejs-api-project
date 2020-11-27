@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Voter from './Voter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <h1>Jeroen's magical voter</h1>
+    <hr />
+    <Voter id={1} />
+    <hr />
+    <Voter id={2} />
+    <hr />
+    <Voter id={3} />
+    <hr />
+  </div>
+);
 
 export default App;

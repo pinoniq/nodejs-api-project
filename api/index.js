@@ -2,12 +2,14 @@ const createError = require('http-errors');
 const logger = require('morgan');
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
 const config = require('./config');
 
 const mainRouter = require('./src/router');
 
 const app = express();
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use('/', mainRouter);
