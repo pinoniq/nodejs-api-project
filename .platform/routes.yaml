@@ -1,6 +1,3 @@
-"https://api.{default}/":
-  type: upstream
-  upstream: "api:http"
 "https://{default}/":
   type: upstream
   upstream: "app:http"
