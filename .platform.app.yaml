@@ -24,7 +24,7 @@ relationships:
 
 web:
   commands:
-    start: "PM2_HOME=/app/run pm2 start api/ecosystem.config.js --no-daemon"
+    start: "cd api && PM2_HOME=/app/run pm2 start ecosystem.config.js --no-daemon"
 
 mounts:
   run:
