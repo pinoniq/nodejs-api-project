@@ -10,7 +10,13 @@
 7. profit
 
 ## Local development
-Get a mongo up and running somwhere.
+Get a mongo up and running somewhere.
 
 e.g. use docker:
 * `docker run -d -p 27017:27017 mongo:3.6`
+
+The hot-reload server doesn't work yet due to it running on a different port.
+I was to lazy to add environment variables for the host-endpoint.
+Mostly in app/src/Voter/index.js
+
+Feel free to add it however!
