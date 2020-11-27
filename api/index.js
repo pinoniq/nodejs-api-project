@@ -11,10 +11,10 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use('/', mainRouter);
-app.use(express.static(path.join(__dirname, '../app/public')));
+app.use(express.static(path.join(__dirname, '../app/build')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '../app/public/index.html'));
+  res.sendFile(path.join(__dirname + '../app/build/index.html'));
 });
 
 // catch 404 and forward to error handler
