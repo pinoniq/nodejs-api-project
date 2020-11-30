@@ -20,3 +20,4 @@ I was to lazy to add environment variables for the host-endpoint.
 Mostly in app/src/Voter/index.js
 
 Feel free to add it however!
+
